@@ -1,0 +1,75 @@
+body {
+  margin: auto;
+  background-color: #da4c29;
+  height: 100%;
+  position: relative;
+  font-family: "Archivo Black", sans-serif;
+  height: -moz-available; /* WebKit-based browsers will ignore this. */
+  height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  height: fill-available;
+  overflow: hidden;
+  touch-action: none !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+html {
+  height: -webkit-fill-available;
+  height: fill-available;
+}
+
+iframe {
+  display: none;
+}
+
+#title {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 6%;
+  color: #fec612;
+  font-size: 35px;
+}
+
+#description {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #fec612;
+  bottom: 10%;
+  font-size: 20px;
+}
+
+#face-container {
+  position: relative;
+  /* width: 100%; */
+  height: 100%;
+}
+
+#face1,
+#face2 {
+  position: fixed;
+  width: 800px;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+
+  transition: transform 0.1s;
+}
