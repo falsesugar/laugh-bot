@@ -58,6 +58,15 @@ function laughSelected() {
 
 let notSmile = true;
 
+function laughBot() {
+  if (notSmile) {
+    notSmile = false;
+  } else {
+    notSmile = true;
+  }
+  switchFace();
+}
+
 function switchFace() {
   if (notSmile) {
     faceImg.src = "./img/face1.svg";
@@ -68,18 +77,4 @@ function switchFace() {
 
 face1.addEventListener("click", laughSelected);
 
-face1.addEventListener("mousedown", mouseDown);
-
-face1.addEventListener("mouseup", mouseUp);
-
-function mouseDown() {
-  notSmile = false;
-  switchFace();
-  console.log("mouse down!");
-}
-
-function mouseUp() {
-  notSmile = true;
-  switchFace();
-  console.log("mouse up!");
-}
+face1.addEventListener("click", laughBot);
